@@ -27,7 +27,7 @@ const Login = ()=> {
                 settoken(response.data.token);
                 
                 console.log(response.data.token);
-                navigate("/sample");
+                navigate("/SqlAssistant");
             }
             else{
                 localStorage.removeItem("token");

@@ -12,3 +12,16 @@ export const loginss=async(data)=>{
         throw error;
     }
 }
+
+
+export const querydata=async(data,token)=>{
+    try{
+        console.log(token);
+        console.log(data);
+        const response=await axios.post(API_URL+"user/generatesql",data,{headers:{"Authorization":`Bearer ${token}`}});
+        return response;
+    }
+    catch(error){
+        throw error;
+    }
+}
